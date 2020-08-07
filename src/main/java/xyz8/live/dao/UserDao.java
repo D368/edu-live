@@ -1,6 +1,7 @@
 package xyz8.live.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 import xyz8.live.entity.User;
 
 /**
@@ -9,6 +10,7 @@ import xyz8.live.entity.User;
  * @author liangw
  * @since 2020-08-06 17:10:55
  */
+@Mapper
 public interface UserDao extends BaseMapper<User> {
 
 }
