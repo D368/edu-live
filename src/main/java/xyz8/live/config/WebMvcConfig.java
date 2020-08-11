@@ -20,7 +20,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
 
         registry.addInterceptor(customInterceptor).addPathPatterns("/**")
-                .excludePathPatterns("/login/**")
+                .excludePathPatterns("/auth/**")
+                .excludePathPatterns("/actuator/**","/error","/favicon.ico")
                 .excludePathPatterns("/swagger-resources/**", "/webjars/**", "/v2/**", "/doc.html/**");
     }
 }

@@ -1,7 +1,5 @@
 package xyz8.live.utils;
 
-import cn.hutool.extra.spring.SpringUtil;
-import cn.hutool.http.server.HttpServerRequest;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import xyz8.live.common.constant.UserConstants;

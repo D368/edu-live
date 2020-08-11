@@ -11,7 +11,9 @@ import xyz8.live.common.constant.ResCode;
 public class ServiceException extends BaseException {
     ResCode resCode;
 
+
     public ServiceException(ResCode resCode){
+        super(resCode.getMessage());
         this.resCode = resCode;
     }
 

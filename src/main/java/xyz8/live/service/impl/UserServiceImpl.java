@@ -10,7 +10,7 @@ import xyz8.live.service.UserService;
  * 用户信息表(User)表服务实现类
  *
  * @author liangw
- * @since 2020-08-06 17:10:56
+ * @since 2020-08-11 14:08:48
  */
 @Service("userService")
 public class UserServiceImpl extends ServiceImpl<UserDao, User> implements UserService {

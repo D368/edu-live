@@ -7,7 +7,6 @@ import xyz8.live.common.constant.ResCode;
 import xyz8.live.common.constant.UserConstants;
 import xyz8.live.entity.User;
 import xyz8.live.exception.ExceptionCast;
-import xyz8.live.utils.JwtUtil;
 import xyz8.live.utils.UserUtil;
 
 import javax.servlet.http.HttpServletRequest;
@@ -26,6 +25,7 @@ public class CustomInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String token = request.getHeader(UserConstants.TOKEN_KEY);
         if (StrUtil.isBlank(token)){
+            System.out.println(request.getRequestURI());
             ExceptionCast.cast(ResCode.TOKEN_NULL);
         }
         User user = UserUtil.getUser();
