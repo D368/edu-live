@@ -11,13 +11,10 @@ public class LoginUserDTO {
 
 
     /**
-     * 用户邮箱
+     * 用户邮箱/手机号
      */
-    private String email;
-    /**
-     * 手机号码
-     */
-    private String phonenumber;
+    private String username;
+
     /**
      * 密码
      */

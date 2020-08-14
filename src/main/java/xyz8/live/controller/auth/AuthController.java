@@ -40,8 +40,8 @@ public class AuthController {
     @ApiOperation(value = "授权")
     public ResResult<Map<String, Object>> auth(@RequestBody LoginUserDTO userDTO){
         User user = userService.getOne(new LambdaQueryWrapper<User>()
-                .eq(StrUtil.isNotBlank(userDTO.getEmail()), User::getEmail, userDTO.getEmail())
-                .eq(StrUtil.isNotBlank(userDTO.getPhonenumber()), User::getPhonenumber, userDTO.getPhonenumber())
+                .eq(StrUtil.isNotBlank(userDTO.getUsername()), User::getEmail, userDTO.getUsername()).or()
+                .eq(StrUtil.isNotBlank(userDTO.getUsername()), User::getPhonenumber, userDTO.getUsername())
         );
         if (null == user){
             ExceptionCast.cast(ResCode.ACCOUNT_NOT_FOUND);
